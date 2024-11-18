@@ -1,0 +1,29 @@
+.service-wrap {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.service-text {
+  width: 100%;
+  line-height: 170%;
+}
+
+.service-icon {
+  width: 60px;
+  max-width: 60px;
+  height: 60px;
+}
+
+@media (min-width: 480px) {
+  .service-text {
+    max-width: 75%;
+  }
+  .service-wrap-header {
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-text {
+    max-width: 800px;
+  }
+}
