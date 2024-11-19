@@ -78,79 +78,6 @@
   }
 }
 
-/* featured-projects */
-
-.property-card-wrap,
-.properties-card {
-  width: 100%;
-}
-
-.property-item-link {
-  &:hover {
-    .property-card-top > img {
-      transform: scale(1.05);
-    }
-  }
-}
-
-.property-card-top {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-}
-
-.property-card-top > img {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-}
-
-.property-card-top > .status-tag {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-weight: 500;
-  padding: 3px 12px;
-  text-align: center;
-  border-radius: 50px;
-  font-size: 12px;
-}
-
-/* category-wrapper */
-.category {
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    .explore-now-btn > .fa-arrow-right-long {
-      left: 8px;
-    }
-  }
-}
-
-.explore-now-btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.explore-now-btn > .fa-arrow-right-long {
-  position: relative;
-  left: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-@media (min-width: 768px) {
-  .category-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
-    align-items: stretch;
-  }
-}
-
 /* why-choose-us-section */
 
 .choose-us-image {
@@ -184,47 +111,6 @@
       transform: translateX(6px);
     }
   }
-}
-
-.blog-link {
-  width: 100%;
-  max-width: 800px;
-  .blog-top {
-    width: 100%;
-    max-width: 800px;
-
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  .read-more-btn {
-    i {
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  &:hover {
-    .blog-top {
-      img {
-        transform: scale(1.05);
-      }
-    }
-
-    .read-more-btn > i {
-      transform: translateX(6px);
-    }
-  }
-}
-
-.sepration-line {
-  background-color: rgba(128, 128, 128, 0.237);
-  display: block;
-  height: 20px;
-  width: 1px;
 }
 
 /* Testimonial Section */
