@@ -13,7 +13,7 @@
     }
   }
 
-  .read-more-btn {
+  .blog-read-more {
     i {
       transition: all 0.3s ease-in-out;
     }
@@ -26,7 +26,7 @@
       }
     }
 
-    .read-more-btn > i {
+    .blog-read-more > i {
       transform: translateX(6px);
     }
   }
