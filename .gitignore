@@ -14,8 +14,8 @@ Thumbs.db                # Windows
 desktop.ini              # Windows
 
 # Build and temp directories
-dist/                    # if you have a build directory
-public/build/            # if generated during build
+dist/                
+public/build/          
 
 # CSS preprocessor output
 *.sass-cache/
