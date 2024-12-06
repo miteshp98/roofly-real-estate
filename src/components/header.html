@@ -1,4 +1,3 @@
-<!-- Header -->
 <header class="site-header absolute w-full">
   <nav
     class="main-nav mx-auto max-w-screen-2xl flex p-3 justify-between items-center 2xl:pl-0"
@@ -38,7 +37,7 @@
       </button>
     </div>
     <div
-      class="navbar fixed w-full h-full bg-orange-50 z-10 inset-0 p-5 py-5 flex flex-col justify-between font-brand hidden"
+      class="navbar fixed w-full max-w-lg h-full bg-orange-50 z-10 p-5 py-5 flex flex-col justify-between font-brand"
     >
       <div class="close-wrapper self-end">
         <button
@@ -51,9 +50,11 @@
         <li class="nav-item uppercase">
           <a
             href="./index.html"
-            class="nav-link pb-5 block border border-x-0 border-t-0 border-slate-800 hover:border-slate-800"
+            class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800 active-link"
+            aria-current="page"
           >
             Home
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class="nav-item uppercase">
@@ -62,6 +63,7 @@
             class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
           >
             About us
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class="nav-item uppercase">
@@ -70,6 +72,7 @@
             class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
           >
             properties
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class="nav-item uppercase">
@@ -78,6 +81,7 @@
             class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
           >
             properties Categories
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class="nav-item uppercase">
@@ -86,10 +90,14 @@
             class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
           >
             Services
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class="nav-item uppercase">
-          <a href="./pages/blog.html" class="nav-link pb-5 block"> Blogs </a>
+          <a href="./pages/blog.html" class="nav-link pb-5 block">
+            Blogs
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </li>
       </ul>
       <div class="navbar-social-wrapper md:flex justify-between">
