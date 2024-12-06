@@ -15,7 +15,8 @@ desktop.ini              # Windows
 
 # Build and temp directories
 dist/                
-public/build/          
+public/build/
+.parcel-cache/  
 
 # CSS preprocessor output
 *.sass-cache/
