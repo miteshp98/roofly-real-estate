@@ -52,6 +52,7 @@
   </head>
 
   <body class="bg-orange-50">
+    <div class="bg-overlay z-10"></div>
     <!-- Header -->
     <header class="site-header absolute w-full">
       <nav
@@ -92,7 +93,7 @@
           </button>
         </div>
         <div
-          class="navbar fixed w-full h-full bg-orange-50 z-10 inset-0 p-5 py-5 flex flex-col justify-between font-brand hidden"
+          class="navbar fixed w-full max-w-lg h-full bg-orange-50 z-10 p-5 py-5 flex flex-col justify-between font-brand"
         >
           <div class="close-wrapper self-end">
             <button
@@ -107,9 +108,11 @@
             <li class="nav-item uppercase">
               <a
                 href="./index.html"
-                class="nav-link pb-5 block border border-x-0 border-t-0 border-slate-800 hover:border-slate-800"
+                class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800 active-link"
+                aria-current="page"
               >
                 Home
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
             <li class="nav-item uppercase">
@@ -118,6 +121,7 @@
                 class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
               >
                 About us
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
             <li class="nav-item uppercase">
@@ -126,6 +130,7 @@
                 class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
               >
                 properties
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
             <li class="nav-item uppercase">
@@ -134,6 +139,7 @@
                 class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
               >
                 properties Categories
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
             <li class="nav-item uppercase">
@@ -142,11 +148,13 @@
                 class="nav-link pb-5 block border border-x-0 border-t-0 hover:border-slate-800"
               >
                 Services
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
             <li class="nav-item uppercase">
               <a href="./pages/blog.html" class="nav-link pb-5 block">
                 Blogs
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </li>
           </ul>
@@ -254,83 +262,9 @@
           >
             Featured Properties
           </h2>
-          <div class="featured-projects my-10 flex flex-col gap-8 md:flex-row">
-            <div class="property-card-wrap font-body">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/e0331214-eeae-49e1-adb8-da7db24ba421/-/preview/1000x666/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Aspen Grove House
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="property-card-wrap font-body">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/c65cd108-414b-4b36-886c-21671d39ee0b/-/preview/1000x666/"
-                    alt="A suburban home featuring a driveway and garage, surrounded by greenery and residential architecture."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Rent </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Brookside Haven
-                    </p>
-                    <p class="property-price text-stone-950">$2,500,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New York, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="property-card-wrap font-body">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/0008401a-7591-458b-a2ee-b41df53a0495/-/preview/1000x666/"
-                    alt="A spacious house featuring a prominent garage, showcasing a blend of modern architecture and ample living space."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Pinecrest Manor
-                    </p>
-                    <p class="property-price text-stone-950">$850,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div
+            class="featured-projects my-10 flex flex-col gap-8 md:flex-row"
+          ></div>
         </div>
       </section>
       <section
@@ -559,158 +493,7 @@
           </h2>
           <div
             class="properties-list flex flex-col my-10 gap-8 md:grid md:grid-rows-3 md:grid-cols-2 min-[830px]:grid-cols-3 min-[830px]:grid-rows-2"
-          >
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/e0331214-eeae-49e1-adb8-da7db24ba421/-/preview/1000x666/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Aspen Grove House
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/0008401a-7591-458b-a2ee-b41df53a0495/-/preview/1000x666/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Brookside Haven
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/c65cd108-414b-4b36-886c-21671d39ee0b/-/preview/1000x666/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Pinecrest Manor
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/4d90aefb-ca8e-4860-8314-871e43f808c3/-/preview/1000x667/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Urban Elegance Mansion
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/16712341-31d8-4e79-ba29-2959cbb0c64f/-/preview/1000x667/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Willow Creek Residence
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="properties-card">
-              <a href="#" class="property-item-link">
-                <div class="property-card-top">
-                  <img
-                    src="https://ucarecdn.com/19ea9a60-f351-4675-90ab-39e72970a947/-/preview/1000x666/"
-                    alt=" A two-story home featuring red siding and white trim, showcasing a classic and inviting architectural style."
-                    class="property-card-img"
-                  />
-                  <span class="status-tag"> For Sale </span>
-                </div>
-                <div class="property-card-bottom">
-                  <div
-                    class="property-card-data flex justify-between gap-3 py-2"
-                  >
-                    <p class="property-name font-body text-stone-950 text-xl">
-                      Urban Loft Offices
-                    </p>
-                    <p class="property-price text-stone-950">$1,200,000 USD</p>
-                  </div>
-                  <div class="property-location text-stone-800 text-sm">
-                    New Jersey, USA
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+          ></div>
         </div>
       </section>
       <section class="testimonial-section font-body p-4 overflow-hidden">
@@ -1034,5 +817,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/main.js" type="module"></script>
+    <!-- <script src="js/components/propertyCard.js" type="module"></script> -->
   </body>
 </html>
