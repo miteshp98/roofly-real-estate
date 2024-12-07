@@ -1,5 +1,3 @@
-
-
 .hero-section {
   background: linear-gradient(#000000a9, #000000c6),
     url("../assets/img/evelyn-paris-XJnP4L958ds-unsplash.jpg");
@@ -117,18 +115,30 @@
 
 /* Testimonial Section */
 
+.testimonial-carousel-container {
+  width: 100%;
+  max-width: 670px;
+  position: relative;
+  overflow: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+.testimonial-slider-wrapper {
+  position: relative;
+  left: 0;
+}
+
 .testimonial-card {
   max-height: 800px;
-  max-width: 650px;
+  width: 100%;
   flex: 0 0 100%;
+  margin-right: 50;
 }
 
 .carousel-contorl-wrap {
   width: 100%;
-
   position: absolute;
   bottom: -20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
