@@ -17,7 +17,9 @@ class LatestProperties extends PropertyCard {
   }
 
   _renderLatestProperties(data) {
-    const latestPropertyContainer = document.querySelector(".properties-list");
+    const latestPropertyContainer = document.querySelector(
+      "[data-property='latest']"
+    );
 
     if (!latestPropertyContainer) {
       return;
