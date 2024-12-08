@@ -8,6 +8,8 @@ export class HeaderManager {
   }
 
   navToggleHandler() {
+    if (!this.#parentElement) return;
+
     this.#parentElement.addEventListener("click", (e) => {
       const openBtn = e.target.closest(".open-nav-btn");
       const closeBtn = e.target.closest(".close-nav-btn");
@@ -42,6 +44,8 @@ export class HeaderManager {
       window.location.pathname.split("/")[
         window.location.pathname.split("/").length - 1
       ];
+
+    if (!this.#navlinks) return;
 
     this.#navlinks.forEach((link) => {
       const href = link.getAttribute("href").split("/")[
