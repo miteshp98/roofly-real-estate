@@ -4,7 +4,6 @@ import TestimonialManager from "./testimonialCard";
 class TestimonialCarousel extends TestimonialManager {
   #section = document.querySelector(".testimonial-section");
   #container = document.querySelector(".testimonial-carousel-container");
-  #wrapper = this.#container.querySelector(".testimonial-slider-wrapper");
   #currentIndex = 0;
 
   constructor() {
@@ -13,11 +12,16 @@ class TestimonialCarousel extends TestimonialManager {
   }
 
   async _processTestimonialData() {
+    const wrapper = document.querySelector(".testimonial-slider-wrapper");
     const testimonialData = await this._fetchTestimonialEntries();
 
-    this.#wrapper.innerHTML = this._renderTestimonialCard(testimonialData);
+    if (!wrapper) {
+      return;
+    }
 
-    this._selectTestimonialElements(this.#wrapper.children);
+    wrapper.innerHTML = this._renderTestimonialCard(testimonialData);
+
+    this._selectTestimonialElements(wrapper.children);
   }
 
   _selectTestimonialElements(testimonialSlides) {
