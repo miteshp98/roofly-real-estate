@@ -15,7 +15,7 @@ export default class PropertyCard {
       return;
     }
 
-    const propertyData = entries.items;
+    const propertyData = entries;
     return propertyData;
   }
 
@@ -24,7 +24,7 @@ export default class PropertyCard {
       return;
     }
 
-    const render = data
+    const render = data.items
       .map((property) => {
         const { title, thumbnail, status, price, city, country } =
           property.fields;
