@@ -1,4 +1,4 @@
-import PropertyCard from "../../components/propertyCard";
+import PropertyCard from "../../components/propertyCardManager";
 
 class Propertieslist extends PropertyCard {
   #totalEntries = 0;
@@ -7,7 +7,7 @@ class Propertieslist extends PropertyCard {
   constructor() {
     super();
     this.currentPage = this._getCurrentPage();
-    this.limit = 3;
+    this.limit = 6;
     this.totalItems = 0;
 
     this._init();
