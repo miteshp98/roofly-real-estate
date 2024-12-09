@@ -190,123 +190,27 @@
             What We Do
           </p>
           <h1 class="text-stone-950 text-5xl">Our Services</h1>
-          <div class="services-content-wrap flex flex-col my-8">
-            <div class="service-wrap py-5">
-              <a
-                href=""
-                class="flex flex-col gap-3 min-[480px]:flex-row min-[480px]:gap-12 min-[480px]:justify-between min-[480px]:items-center"
-              >
-                <div
-                  class="service-wrap-header flex flex-col justify-start items-start"
-                >
-                  <img
-                    src="../assets/icons/document.png"
-                    alt="document"
-                    class="service-icon"
-                  />
-                  <h3
-                    class="font-heading font-regular my-5 tracking-wide text-xl lg:text-2xl"
-                  >
-                    Land Acquisition
-                  </h3>
-                </div>
-                <p class="text-stone-800 service-text">
-                  Land acquisition refers to the strategic process of obtaining
-                  land parcels for diverse needs, including residential,
-                  commercial development, or environmental preservation.
-                </p>
-              </a>
-            </div>
-            <div class="service-wrap py-5">
-              <a
-                href=""
-                class="flex flex-col gap-3 min-[480px]:flex-row min-[480px]:gap-12 min-[480px]:justify-between min-[480px]:items-center"
-              >
-                <div
-                  class="service-wrap-header flex flex-col justify-start items-start"
-                >
-                  <img
-                    src="../assets/icons/save-money.png"
-                    alt="document"
-                    class="service-icon"
-                  />
-                  <h3
-                    class="font-heading font-regular my-5 tracking-wide text-xl lg:text-2xl"
-                  >
-                    Investment Properties
-                  </h3>
-                </div>
-                <p class="text-stone-800 service-text">
-                  Investment properties refer to real estate bought with the
-                  goal of earning income or generating profit through rental
-                  income or long-term appreciation in value.
-                </p>
-              </a>
-            </div>
-            <div class="service-wrap py-5">
-              <a
-                href=""
-                class="flex flex-col gap-3 min-[480px]:flex-row min-[480px]:gap-12 min-[480px]:justify-between min-[480px]:items-center"
-              >
-                <div
-                  class="service-wrap-header flex flex-col justify-start items-start"
-                >
-                  <img
-                    src="../assets/icons/inspection.png"
-                    alt="document"
-                    class="service-icon"
-                  />
-                  <h3
-                    class="font-heading font-regular my-5 tracking-wide text-xl lg:text-2xl"
-                  >
-                    Home Inspection
-                  </h3>
-                </div>
-                <p class="text-stone-800 service-text">
-                  Home inspection is the process of evaluating the condition of
-                  a property, identifying potential issues, and assessing its
-                  safety, structure, and overall condition before a sale or
-                  purchase.
-                </p>
-              </a>
-            </div>
-            <div class="service-wrap py-5">
-              <a
-                href=""
-                class="flex flex-col gap-3 min-[480px]:flex-row min-[480px]:gap-12 min-[480px]:justify-between min-[480px]:items-center"
-              >
-                <div
-                  class="service-wrap-header flex flex-col justify-start items-start"
-                >
-                  <img
-                    src="../assets/icons/apartment.png"
-                    alt="document"
-                    class="service-icon"
-                  />
-                  <h3
-                    class="font-heading font-regular my-5 tracking-wide text-xl lg:text-2xl"
-                  >
-                    Commercial Real Estate
-                  </h3>
-                </div>
-                <p class="text-stone-800 service-text">
-                  Commercial real estate encompasses properties utilized for
-                  business purposes, including offices, retail spaces,
-                  warehouses, and multifamily housing, designed to yield income.
-                </p>
-              </a>
-            </div>
-          </div>
+          <div class="flex flex-col my-8" data-servicesList></div>
           <div class="pagination-wrap flex justify-end">
             <button
-              class="uppercase border py-2 px-5 rounded-lg tracking-wide border-black text-stone-950 hover:bg-zinc-950 transition duration-500 ease-in-out hover:text-white"
+              class="uppercase border py-2 px-5 rounded-lg tracking-wide border-black text-stone-950 hover:bg-zinc-950 transition duration-500 ease-in-out hover:text-white hidden"
+              data-prevBtn
+            >
+              Previous
+            </button>
+
+            <button
+              class="uppercase border py-2 px-5 rounded-lg tracking-wide border-black text-stone-950 hover:bg-zinc-950 transition duration-500 ease-in-out hover:text-white hidden"
+              data-nextBtn
             >
               Next
             </button>
           </div>
         </div>
       </section>
-      <section class="testimonial-section p-4 py-10 font-body md:pt-20">
+      <section
+        class="testimonial-section p-4 py-10 font-body md:pt-20 overflow-hidden"
+      >
         <div class="container mx-auto max-w-screen-2xl relative">
           <p class="text-sm text-stone-600 uppercase tracking-wide">
             Testimonials
@@ -320,94 +224,13 @@
               <i class="fa-solid fa-arrow-right"> </i>
             </button>
           </div>
-          <div
-            class="testimonial-carousel-container my-8 max-w-screen-2xl overflow-hidden"
-          >
-            <div class="testimonial-slider-wrapper flex gap-10 py-5">
-              <div class="testimonial-card flex flex-col gap-5">
-                <div class="testimonial-header max-w-md">
-                  <img
-                    src="https://ucarecdn.com/fb533836-e641-4d21-add7-414876b11ac2/-/preview/1000x1000/"
-                    alt="James O’Connor"
-                    class="rounded-lg"
-                  />
-                </div>
-                <div
-                  class="testimonial-content p-5 bg-white rounded-lg flex flex-col justify-between"
-                >
-                  <p class="client-msg text-stone-800 leading-7">
-                    Roofly made my first home-buying experience smooth and
-                    hassle-free. The team was professional, friendly, and
-                    incredibly knowledgeable!
-                  </p>
-                  <div class="client-name-wrap my-5">
-                    <p class="client-name font-heading text-stone-950">
-                      James O’Connor
-                    </p>
-                    <p class="client-location text-stone-600 text-sm">
-                      New Jersey, USA
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="testimonial-card flex flex-col gap-5">
-                <div class="testimonial-header max-w-md">
-                  <img
-                    src="https://ucarecdn.com/fb533836-e641-4d21-add7-414876b11ac2/-/preview/1000x1000/"
-                    alt="James O’Connor"
-                    class="rounded-lg"
-                  />
-                </div>
-                <div
-                  class="testimonial-content p-5 bg-white rounded-lg flex flex-col justify-between"
-                >
-                  <p class="client-msg text-stone-800 leading-7">
-                    Roofly made my first home-buying experience smooth and
-                    hassle-free. The team was professional, friendly, and
-                    incredibly knowledgeable!
-                  </p>
-                  <div class="client-name-wrap my-5">
-                    <p class="client-name font-heading text-stone-950">
-                      James O’Connor
-                    </p>
-                    <p class="client-location text-stone-600 text-sm">
-                      New Jersey, USA
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="testimonial-card flex flex-col gap-5">
-                <div class="testimonial-header w-full">
-                  <img
-                    src="https://ucarecdn.com/fb533836-e641-4d21-add7-414876b11ac2/-/preview/1000x1000/"
-                    alt="James O’Connor"
-                    class="rounded-lg"
-                  />
-                </div>
-                <div
-                  class="testimonial-content p-5 bg-white rounded-lg flex flex-col justify-between"
-                >
-                  <p class="client-msg text-stone-800 leading-7">
-                    Roofly made my first home-buying experience smooth and
-                    hassle-free. The team was professional, friendly, and
-                    incredibly knowledgeable!
-                  </p>
-                  <div class="client-name-wrap my-5">
-                    <p class="client-name font-heading text-stone-950">
-                      James O’Connor
-                    </p>
-                    <p class="client-location text-stone-600 text-sm">
-                      New Jersey, USA
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="testimonial-carousel-container my-8">
+            <div class="testimonial-slider-wrapper flex py-5"></div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="foooter-section pt-10 font-body md:pt-20">
+    <footer class="foooter-section pt-12 font-body md:pt-20">
       <div
         class="footer-contact-us-wrappper p-5 py-20 flex flex-col items-center gap-4 md:py-32"
       >
@@ -424,7 +247,7 @@
         </a>
       </div>
       <div
-        class="container footer-container mx-auto max-w-screen-2xl py-12 p-4"
+        class="container footer-container mx-auto max-w-screen-2xl py-12 p-4 pt-16"
       >
         <div class="footer-top flex flex-col items-center gap-5">
           <div class="footer-nav-container">
@@ -521,6 +344,7 @@
         </div>
       </div>
     </footer>
-    <script src="../js/components/header.js" type="module"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/pages/services/servicesList.js"></script>
   </body>
 </html>
