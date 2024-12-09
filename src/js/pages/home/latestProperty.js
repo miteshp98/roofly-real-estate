@@ -1,4 +1,4 @@
-import PropertyCard from "../../components/propertyCard";
+import PropertyCard from "../../components/propertyCardManager";
 
 class LatestProperties extends PropertyCard {
   constructor() {

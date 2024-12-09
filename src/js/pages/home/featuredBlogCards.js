@@ -1,4 +1,4 @@
-import BlogCardManager from "../../components/blogCard";
+import BlogCardManager from "../../components/blogCardManager";
 
 class FeaturedBlogCards extends BlogCardManager {
   constructor() {
