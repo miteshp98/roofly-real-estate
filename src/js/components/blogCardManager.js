@@ -15,7 +15,7 @@ export default class BlogCardManager {
       return;
     }
 
-    const blogData = entries.items;
+    const blogData = entries;
     return blogData;
   }
 
@@ -24,7 +24,7 @@ export default class BlogCardManager {
       return;
     }
 
-    const render = data
+    const render = data.items
       .map((post) => {
         const { title, featuredImage, publishedDate, tags } = post.fields;
 

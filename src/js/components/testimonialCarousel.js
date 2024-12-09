@@ -1,5 +1,5 @@
 import { client } from "../utils/contentfulApi";
-import TestimonialManager from "./testimonialCard";
+import TestimonialManager from "./testimonialManager";
 
 class TestimonialCarousel extends TestimonialManager {
   #section = document.querySelector(".testimonial-section");
