@@ -26,7 +26,7 @@ export default class PropertyCard {
 
     const render = data.items
       .map((property) => {
-        const { title, thumbnail, status, price, city, country } =
+        const { title, thumbnail, status, price, city, country, slug } =
           property.fields;
 
         return `<div class="properties-card">
@@ -36,7 +36,8 @@ export default class PropertyCard {
                 status,
                 price,
                 city,
-                country
+                country,
+                slug
               )}</div>`;
       })
       .join("");
@@ -44,10 +45,10 @@ export default class PropertyCard {
     return render;
   }
 
-  _generateMarkup(title, thumbnail, status, price, city, country) {
+  _generateMarkup(title, thumbnail, status, price, city, country, slug) {
     const markup = `
 
-    <a href="#" class="property-item-link">
+    <a href="../../pages/property-view.html?slug=${slug}" class="property-item-link">
 
     <div class="property-card-top">
       
