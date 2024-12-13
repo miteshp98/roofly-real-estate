@@ -26,10 +26,16 @@ export default class BlogCardManager {
 
     const render = data.items
       .map((post) => {
-        const { title, featuredImage, publishedDate, tags } = post.fields;
+        const { title, featuredImage, publishedDate, tags, slug } = post.fields;
 
         return `<div class='blog-card'>
-              ${this._generateMarkup(title, featuredImage, publishedDate, tags)}
+              ${this._generateMarkup(
+                title,
+                featuredImage,
+                publishedDate,
+                tags,
+                slug
+              )}
               </div>`;
       })
       .join("");
@@ -37,10 +43,10 @@ export default class BlogCardManager {
     return render;
   }
 
-  _generateMarkup(title, featuredImage, publishedDate, tags) {
+  _generateMarkup(title, featuredImage, publishedDate, tags, slug) {
     const markup = `
 
-    <a href="#" class="blog-link bg-white p-5 flex flex-col rounded-xl gap-3">
+    <a href="../../pages/blog-view.html?slug=${slug}" class="blog-link bg-white p-5 flex flex-col rounded-xl gap-3">
         <div class="blog-top rounded-md">
             <img
             src="${featuredImage?.fields.file.url}"
