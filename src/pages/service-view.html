@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- General Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Discover a wide range of properties tailored to your needs. Explore homes for sale, apartments for rent, and commercial real estate options at Roofly."
+      content="Explore the best listings with Roofly, the modern solution for buying, renting, and selling homes. Discover detailed property insights, professional agents, and find your dream home today!"
     />
+
     <meta
       name="keywords"
-      content="properties, homes for sale, apartments for rent, commercial real estate, real estate listings, property search, buy a home, Roofly"
+      content="real estate, homes for sale, property listings, apartments for rent, buy a home, real estate agents, houses for sale, modern real estate, Roofly"
     />
+
     <meta name="author" content="Roofly Team" />
+
     <!-- Open Graph Meta Tags (For Social Media Sharing) -->
-    <meta property="og:title" content="Explore Our Properties - Roofly" />
+    <meta
+      property="og:title"
+      content="Roofly - Your Modern Real Estate Solution"
+    />
+
     <meta
       property="og:description"
-      content="Find your dream property at Roofly. Browse our listings of homes, apartments, and commercial real estate to find the perfect match for your needs."
+      content="Find your dream home with Roofly. Browse our curated listings, connect with trusted agents, and explore properties tailored to your needs."
     />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:url" content="https://yourdomain.com/properties"
-    />
-    <meta property="og:image" content="https://yourdomain.com/assets/images/properties-og-image.jpg"
-    />
-    -->
+
+    <!-- <meta property="og:url" content="https://htmlcheatsheet.com/" /> -->
+    <!-- <meta property="og:image" content="https://htmlcheatsheet.com/demo.jpg" /> -->
+
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Language" content="en-US" />
+
     <!-- Google Font's -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
     <!-- Fontawesome CDN -->
     <link
       rel="stylesheet"
@@ -43,12 +50,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/custom.css" />
-    <title>Explore Our Properties - Roofly</title>
-  </head>
 
+    <title></title>
+  </head>
   <body class="bg-orange-50">
     <div class="bg-overlay z-10"></div>
     <header
@@ -184,198 +192,135 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="properties-hero-section p-4 py-16 font-body">
-        <div class="container properties-container max-w-screen-2xl mx-auto">
-          <p class="uppercase tracking-wide text-sm text-stone-600">
-            New Arrivals
+    <section class="service-view-section p-4 py-16 font-body">
+      <div class="container service-view-container mx-auto max-w-screen-2xl">
+        <div class="container-title py-5">
+          <p class="uppercase text-stone-600 text-sm tracking-wide">
+            Categories
           </p>
-          <h1 class="font-heading text-4xl tracking-wide text-stone-950">
-            Latest Properties
+          <h1 class="text-stone-950 text-5xl font-heading">
+            Green Living Homes
           </h1>
-          <div
-            class="properties-list flex flex-col my-10 gap-8 md:flex-row md:flex-wrap"
-            data-propertyList="list"
-          ></div>
-          <div class="pagination-btn-wrap flex justify-between">
-            <button
-              class="prev-btn uppercase border py-2 px-5 rounded-lg tracking-wide border-black text-stone-950 hover:bg-zinc-950 transition duration-500 ease-in-out hover:text-white hidden"
-              data-prevPage
-            >
-              Previous
-            </button>
+        </div>
 
-            <button
-              class="next-btn uppercase border py-2 px-5 rounded-lg tracking-wide border-black text-stone-950 hover:bg-zinc-950 transition duration-500 ease-in-out hover:text-white hidden"
-              data-nextPage
-            >
-              Next
-            </button>
+        <div class="service-view-top mt-8 flex flex-col md:flex-row gap-6">
+          <div class="service-img-wrap max-h-[650px] w-full">
+            <img
+              src="../assets/img/phil-5i0GnoTTjSE-unsplash.jpg"
+              alt=""
+              class="rounded-lg w-full object-cover h-full"
+            />
           </div>
-        </div>
-      </section>
-      <section class="faq-section p-4 py-16 font-body">
-        <div
-          class="container faq-container mx-auto max-w-screen-2xl flex flex-col md:flex-row gap-5 md:justify-between lg:gap-10"
-        >
-          <div class="faq-header flex flex-col gap-8 justify-between">
-            <div>
-              <p class="uppercase text-sm text-stone-600 tracking-wide">
-                Faq's
-              </p>
-              <h2
-                class="text-2xl font-heading tracking-wide text-stone-950 md:text-3xl"
-              >
-                Frequently Asked Questions
-              </h2>
+
+          <div
+            class="service-info-wrap w-full max-w-[380px] w-full bg-white rounded-lg p-7 border h-max lg:p-8"
+          >
+            <div class="service-info-data flex flex-col gap-10">
+              <div class="service-info-bottom">
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+                <a
+                  href="#"
+                  class="border w-full flex items-center justify-between border-t-0 border-x-0 py-3 text-stone-600 text-[15px] hover:border-black"
+                  >Land Acquistion</a
+                >
+              </div>
             </div>
-            <div>
-              <p class="font-medium my-2 text-[18px]">
-                Curious about something else?
-              </p>
-              <p class="text-sm">
-                Seeking more information? Feel free to reach out to our customer
-                service team for assistance.
-              </p>
+
+            <div class="mt-10 flex flex-col items-center justify-center gap-4">
+              <p class="text-[18px] text-stone-600">Any Question? Let's talk</p>
+
               <a
-                href="#"
-                class="text-stone-950 flex items-center gap-3 uppercase text-sm mt-5 w-max font-medium"
+                href="../pages/contact-us.html"
+                class="collobrate-btn uppercase bg-zinc-950 text-white w-full text-center p-3 rounded-lg border border-black hover:bg-transparent hover:text-stone-950 transition duration-500 ease-in-out"
               >
-                <i class="fa-solid fa-arrow-right-long"> </i>
-                Contact Us
-              </a>
-            </div>
-          </div>
-          <div class="faq-content mt-5 md:w-full lg:w-3/5 md:mt-0">
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
+                Collaborate now</a
               >
-                <p class="font-heading">What services does Roofly offer?</p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  Roofly provides comprehensive real estate services, including
-                  property listings, expert guidance for buying and selling,
-                  market insights, and tools to manage your real estate
-                  transactions efficiently.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
-              >
-                <p class="font-heading">
-                  Are the property listings on Roofly verified?
-                </p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  Yes, Roofly ensures all property listings are verified for
-                  authenticity. Our team thoroughly reviews and validates the
-                  information before making it available to users.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
-              >
-                <p class="font-heading">
-                  Does Roofly provide assistance with legal documentation?
-                </p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  Yes, we offer expert guidance for preparing and verifying
-                  legal documents to ensure smooth and secure transactions for
-                  both buyers and sellers.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
-              >
-                <p class="font-heading">
-                  Can I schedule property visits through Roofly?
-                </p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  Absolutely! Roofly allows you to schedule property visits at
-                  your convenience by contacting the respective agents or
-                  sellers directly via our platform.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
-              >
-                <p class="font-heading">
-                  Does Roofly charge a fee for its services?
-                </p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  Roofly is free for users browsing properties. For sellers and
-                  agents, we offer premium listing packages at affordable rates
-                  to maximize visibility and engagement.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div
-                class="faq-question flex items-center justify-between"
-                aria-expanded="false"
-              >
-                <p class="font-heading">
-                  How can I contact customer support for assistance?
-                </p>
-                <div class="plus-icon">
-                  <span class="plus-horizontal"> </span>
-                  <span class="plus-vertical"> </span>
-                </div>
-              </div>
-              <div class="faq-answer">
-                <p class="text-stone-600">
-                  You can reach Roofly’s support team via the "Contact Us"
-                  section on our website. We are available to assist you with
-                  any inquiries or issues you may have.
-                </p>
-              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div
+          class="property-overview-container flex flex-col-reverse gap-8 min-[992px]:flex-row min-[992px]:justify-between mt-10"
+        >
+          <div class="property-overview max-w-[1080px] w-full">
+            <div class="overview-top">
+              <h2 class="text-2xl font-heading">Overview</h2>
+
+              <div class="overview-data">
+                <p class="text-stone-950 mt-5 leading-7">
+                  Modern Downtown Apartment presents a collection of
+                  meticulously crafted homes, each designed to elevate the art
+                  of modern living. With sprawling green spaces, scenic views,
+                  and thoughtfully planned amenities, residents can immerse
+                  themselves in a serene retreat without compromising on
+                  convenience. Indulge in the charm of Modern Downtown Apartment
+                  where every residence is a testament to quality craftsmanship
+                  and contemporary design.
+                </p>
+                <p class="text-stone-950 mt-5 leading-7">
+                  Whether you're seeking a peaceful escape or a vibrant
+                  community, Modern Downtown Apartment welcomes you to lifestyle
+                  defined by beauty, comfort, and the allure of nature.
+                </p>
+              </div>
+            </div>
+
+            <div class="overview-bottom mt-12">
+              <h2 class="text-2xl font-heading">Amenities</h2>
+
+              <ul
+                class="amenities-list mt-5 flex flex-col gap-5 text-stone-950 max-w-[650px] justify-between min-[625px]:flex-row min-[625px]:flex-wrap"
+              >
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+                <li class="amenities">Outdoor Kitchen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="foooter-section pt-12 font-body md:pt-20">
       <div
         class="footer-contact-us-wrappper p-5 py-20 flex flex-col items-center gap-4 md:py-32"
@@ -490,11 +435,5 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="../js/main.js"></script>
-    <script
-      type="module"
-      src="../js/pages/properties/propertiesList.js"
-      defer
-    ></script>
   </body>
 </html>
