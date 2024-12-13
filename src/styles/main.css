@@ -751,6 +751,14 @@ video {
   height: max-content;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
 .max-h-\[650px\] {
   max-height: 650px;
 }
@@ -759,8 +767,8 @@ video {
   width: 3.5rem;
 }
 
-.w-\[5px\] {
-  width: 5px;
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[80px\] {
@@ -776,24 +784,8 @@ video {
   width: max-content;
 }
 
-.w-\[10px\] {
-  width: 10px;
-}
-
-.w-\[25px\] {
-  width: 25px;
-}
-
-.w-\[30px\] {
-  width: 30px;
-}
-
-.w-\[40px\] {
-  width: 40px;
-}
-
-.w-\[35px\] {
-  width: 35px;
+.w-\[full\] {
+  width: full;
 }
 
 .max-w-3xl {
@@ -820,8 +812,8 @@ video {
   max-width: 380px;
 }
 
-.max-w-\[650px\] {
-  max-width: 650px;
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .max-w-\[750px\] {
@@ -842,6 +834,42 @@ video {
 
 .max-w-screen-2xl {
   max-width: 1536px;
+}
+
+.max-w-\[800px\] {
+  max-width: 800px;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.max-w-\[1250px\] {
+  max-width: 1250px;
+}
+
+.max-w-\[1210px\] {
+  max-width: 1210px;
+}
+
+.max-w-\[1220px\] {
+  max-width: 1220px;
+}
+
+.max-w-\[900px\] {
+  max-width: 900px;
+}
+
+.max-w-\[00px\] {
+  max-width: 00px;
+}
+
+.max-w-\[950px\] {
+  max-width: 950px;
 }
 
 .transform {
@@ -1154,6 +1182,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -1176,6 +1209,14 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-center {
@@ -1301,6 +1342,14 @@ video {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[30px\] {
+  line-height: 30px;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
 }
 
 .tracking-wide {
@@ -1671,6 +1720,22 @@ video {
 
   .md\:text-\[18em\] {
     font-size: 18em;
+  }
+
+  .md\:leading-\[\] {
+    line-height: ;
+  }
+
+  .md\:leading-\[40px\] {
+    line-height: 40px;
+  }
+
+  .md\:leading-\[30px\] {
+    line-height: 30px;
+  }
+
+  .md\:leading-\[55px\] {
+    line-height: 55px;
   }
 }
 
