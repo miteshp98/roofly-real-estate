@@ -25,13 +25,14 @@ export default class ServicesManager {
 
     const render = data.items
       .map((service) => {
-        const { serviceName, icon, serviceDescription } = service.fields;
+        const { serviceName, icon, serviceDescription, slug } = service.fields;
 
         return `<div class="service-wrap py-5">
                 ${this._generateMarkup(
                   serviceName,
                   icon,
-                  serviceDescription
+                  serviceDescription,
+                  slug
                 )}</div>`;
       })
       .join("");
@@ -39,9 +40,9 @@ export default class ServicesManager {
     return render;
   }
 
-  _generateMarkup(serviceName, icon, serviceDescription) {
+  _generateMarkup(serviceName, icon, serviceDescription, slug) {
     const markup = `
-              <a href=""
+              <a href="../../pages/service-view.html?slug=${slug}"
                 class="flex flex-col gap-3 min-[480px]:flex-row 
                 min-[480px]:gap-12 min-[480px]:justify-between 
                 min-[480px]:items-center">
