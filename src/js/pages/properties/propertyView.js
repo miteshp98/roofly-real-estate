@@ -1,4 +1,5 @@
 import { client } from "../../utils/contentfulApi";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 class PropertyView {
   #urlParams = new URLSearchParams(window.location.search);
@@ -46,6 +47,7 @@ class PropertyView {
     const galleryGrid = this.#bottomSection.querySelector(
       ".property-gallery-grid"
     );
+    const pageTitle = document.querySelector("title");
 
     if (!container || !galleryGrid) return;
 
@@ -53,6 +55,15 @@ class PropertyView {
     galleryGrid.innerHTML = this._createPropertyGallery(
       property.fields.propertyGallery
     );
+    pageTitle.innerHTML = property.fields.title;
+  }
+
+  _renderRichText(richTextField) {
+    if (!richTextField || !richTextField.nodeType) {
+      console.error("Invalid rich text field");
+      return "";
+    }
+    return documentToHtmlString(richTextField);
   }
 
   _createPropertyInfo(property) {
@@ -172,14 +183,8 @@ class PropertyView {
             <div class="overview-top">
               <h2 class="text-2xl font-heading">Overview</h2>
 
-              <div class="overview-data">
-                <p class="text-stone-950 mt-5 leading-7">${
-                  property.description.content.map((i) => i.content[0])[0].value
-                }</p>
-                <p class="text-stone-950 mt-5 leading-7">${
-                  property.description.content.map((i) => i?.content[0])[1]
-                    .value ?? ""
-                }</p>
+              <div class="overview-data mt-5 text-stone-700 flex flex-col gap-5">
+              ${this._renderRichText(property.description)}
               </div>
 
             </div>
