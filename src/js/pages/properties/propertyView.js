@@ -55,7 +55,7 @@ class PropertyView {
     galleryGrid.innerHTML = this._createPropertyGallery(
       property.fields.propertyGallery
     );
-    pageTitle.innerHTML = property.fields.title;
+    pageTitle.innerHTML = `${property.fields.title} - Roofly Properties`;
   }
 
   _renderRichText(richTextField) {

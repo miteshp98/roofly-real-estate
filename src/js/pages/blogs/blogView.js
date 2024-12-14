@@ -50,11 +50,13 @@ class BlogView {
   _generateMarkup(blogs) {
     const blogContainer = this.#section.querySelector(".blog-view-container");
     const blogArticle = this.#article.querySelector(".blog-article-container");
+    const pageTitle = document.querySelector("title");
 
     if (!blogContainer) return;
 
     blogContainer.innerHTML = this._createBlogsInfo(blogs.fields);
     blogArticle.innerHTML = this._createBlogArticle(blogs.fields);
+    pageTitle.innerHTML = `${blogs.fields.title} - Roofly Blogs`;
   }
 
   _createBlogsInfo(blogs) {

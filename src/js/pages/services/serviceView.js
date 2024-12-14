@@ -47,7 +47,7 @@ class ServiceView {
     if (!container) return;
 
     container.innerHTML = this._createServiceInfo(service.fields, entries);
-    title.innerHTML = service.fields.serviceName;
+    title.innerHTML = `${service.fields.serviceName} - Roofly Service`;
   }
 
   _createServiceInfo(service, entries) {
