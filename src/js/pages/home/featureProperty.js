@@ -1,4 +1,4 @@
-import PropertyCard from "../../components/propertyCardManager";
+import PropertyCard from "../../components/manager/propertyCardManager";
 
 class FeatureProperty extends PropertyCard {
   constructor() {

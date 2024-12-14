@@ -1,4 +1,4 @@
-import ServicesManager from "../../components/servicesManager";
+import ServicesManager from "../../components/manager/servicesManager";
 
 class FeatureServiceView extends ServicesManager {
   constructor() {

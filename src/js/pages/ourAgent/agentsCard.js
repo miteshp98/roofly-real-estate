@@ -1,4 +1,4 @@
-import AgentCardManager from "../../components/agentsCardManager";
+import AgentCardManager from "../../components/manager/agentsCardManager";
 
 class agentCardView extends AgentCardManager {
   constructor() {
