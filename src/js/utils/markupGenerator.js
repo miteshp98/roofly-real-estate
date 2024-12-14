@@ -42,7 +42,7 @@ export function propertyCardMarkup(
   slug
 ) {
   return `
-     <a href="../../pages/property-view.html?slug=${slug}" class="property-item-link">
+     <a href="/pages/property-view.html?slug=${slug}" class="property-item-link">
 
     <div class="property-card-top">
       
@@ -76,7 +76,7 @@ export function blogCardMarkup(
   fn
 ) {
   return `
-    <a href="../../pages/blog-view.html?slug=${slug}" class="blog-link bg-white p-5 flex flex-col rounded-xl gap-3">
+    <a href="/pages/blog-view.html?slug=${slug}" class="blog-link bg-white p-5 flex flex-col rounded-xl gap-3">
         <div class="blog-top rounded-md">
             <img
             src="${featuredImage?.fields.file.url}"
