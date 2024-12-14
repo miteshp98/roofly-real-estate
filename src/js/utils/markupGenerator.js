@@ -1,6 +1,6 @@
 export function agentCardMarkup(name, bio, phone, email, profilePic, slug) {
   return `
-    <a href="../../pages/agent-profile.html?slug=${slug}" class="agent-profile-link flex flex-col">
+    <a href="/pages/agent-profile.html?slug=${slug}" class="agent-profile-link flex flex-col">
 
     <div class="agent-header">
       <img
