@@ -29,7 +29,15 @@ To get the project up and running locally, you'll need:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/roofly-real-estates.git
 
    cd roofly-real-estates
+   ```
+
+### Running the Project Locally
+
+```bash
+npm start
+```
