@@ -30,6 +30,22 @@
     <!-- <meta property="og:url" content="https://htmlcheatsheet.com/" /> -->
     <!-- <meta property="og:image" content="https://htmlcheatsheet.com/demo.jpg" /> -->
 
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Roofly" />
+    <link rel="manifest" href="../site.webmanifest" />
+
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Language" content="en-US" />
@@ -59,6 +75,11 @@
   </head>
   <body class="bg-orange-50">
     <div class="bg-overlay z-10"></div>
+
+    <div class="loader-container">
+      <span class="loader"></span>
+    </div>
+
     <header
       class="site-header w-full border border-x-0 border-t-0 border-gray-500/[.4]"
     >
@@ -312,6 +333,7 @@
         </div>
       </div>
     </footer>
+
     <script defer type="module" src="../js/main.js"></script>
     <script
       defer
