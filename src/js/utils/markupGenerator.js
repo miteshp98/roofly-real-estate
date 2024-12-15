@@ -6,6 +6,7 @@ export function agentCardMarkup(name, bio, phone, email, profilePic, slug) {
       <img
         src="${profilePic?.fields.file.url}"
         alt="${name}"
+        loading="lazy"
         class="agent-image"
       />
     </div>
@@ -49,6 +50,7 @@ export function propertyCardMarkup(
     <img
         src="${thumbnail?.fields.file.url}"
         alt="${thumbnail?.fields.description}"
+        loading="lazy"
         class="property-card-img"
       />
 
@@ -81,6 +83,7 @@ export function blogCardMarkup(
             <img
             src="${featuredImage?.fields.file.url}"
             alt="${featuredImage?.fields.description}" 
+            loading="lazy"
             class="rounded-md" />
         </div>
 
