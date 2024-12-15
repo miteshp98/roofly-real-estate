@@ -1,5 +1,6 @@
 import { client } from "../../utils/contentfulApi";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { _hideLoader, _showLoader } from "../../components/loaderfn";
 
 class ServiceView {
   #urlParams = new URLSearchParams(window.location.search);
@@ -20,15 +21,26 @@ class ServiceView {
   }
 
   async _fetchServiceEntry() {
-    const entries = await client.getEntries();
+    _showLoader();
 
-    if (!entries) return;
+    try {
+      const entries = await client.getEntries();
 
-    const service = entries.items.find(
-      (entry) => entry.fields.slug === this.#slug
-    );
+      if (!entries) {
+        _hideLoader();
+        return;
+      }
 
-    this._renderServiceDetails(service, entries);
+      const service = entries.items.find(
+        (entry) => entry.fields.slug === this.#slug
+      );
+
+      this._renderServiceDetails(service, entries);
+    } catch (error) {
+      window.location = "../../../pages/page-not-found.html";
+    } finally {
+      _hideLoader();
+    }
   }
 
   _renderServiceDetails(service, entries) {
@@ -37,6 +49,7 @@ class ServiceView {
       return;
     }
 
+    _hideLoader();
     this._generateMarkup(service, entries);
   }
 
@@ -66,6 +79,7 @@ class ServiceView {
             <img
               src="${service?.serviceThumb.fields.file.url}"
               alt=""
+              loading="lazy"
               class="rounded-lg w-full object-cover h-full"
             />
         </div>

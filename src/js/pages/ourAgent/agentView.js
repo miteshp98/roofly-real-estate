@@ -1,4 +1,5 @@
 import { client } from "../../utils/contentfulApi";
+import { _showLoader, _hideLoader } from "../../components/loaderfn";
 
 class AgentView {
   #urlParams = new URLSearchParams(window.location.search);
@@ -19,15 +20,26 @@ class AgentView {
   }
 
   async _fetchAgentData() {
-    const entries = await client.getEntries();
+    _showLoader();
 
-    if (!entries) return;
+    try {
+      const entries = await client.getEntries();
 
-    const agentProfile = entries.items.find((entry) => {
-      return entry.fields.slug === this.#slug;
-    });
+      if (!entries) {
+        _hideLoader();
+        return;
+      }
 
-    this._renderAgentProfile(agentProfile);
+      const agentProfile = entries.items.find((entry) => {
+        return entry.fields.slug === this.#slug;
+      });
+
+      this._renderAgentProfile(agentProfile);
+    } catch (error) {
+      window.location = "../../../pages/page-not-found.html";
+    } finally {
+      _hideLoader();
+    }
   }
 
   _renderAgentProfile(agent) {
@@ -36,6 +48,7 @@ class AgentView {
       return;
     }
 
+    _hideLoader();
     this._generateMarkup(agent);
   }
 

@@ -1,6 +1,7 @@
 import { client } from "../../utils/contentfulApi";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import { _showLoader, _hideLoader } from "../../components/loaderfn";
 
 class BlogView {
   #urlParams = new URLSearchParams(window.location.search);
@@ -22,21 +23,26 @@ class BlogView {
   }
 
   async _fetchBlogDataEntry() {
-    const entries = await client.getEntries();
+    _showLoader();
 
-    if (!entries) return;
+    try {
+      const entries = await client.getEntries();
 
-    const blogData = entries.items.find(
-      (entry) => entry.fields.slug === this.#slug
-    );
+      if (!entries) {
+        _hideLoader();
+        return;
+      }
 
-    this._renderBlogDetails(blogData);
+      const blogData = entries.items.find(
+        (entry) => entry.fields.slug === this.#slug
+      );
 
-    console.log(
-      entries.items
-        .filter((entry) => entry.sys.contentType.sys.id === "blogPost")
-        .filter((post) => post.fields.slug !== this.#slug)
-    );
+      this._renderBlogDetails(blogData);
+    } catch (error) {
+      window.location = "../../../pages/page-not-found.html";
+    } finally {
+      _hideLoader();
+    }
   }
 
   _renderBlogDetails(blogs) {
@@ -44,6 +50,8 @@ class BlogView {
       window.location = "../../../pages/page-not-found.html";
       return;
     }
+
+    _hideLoader();
     this._generateMarkup(blogs);
   }
 

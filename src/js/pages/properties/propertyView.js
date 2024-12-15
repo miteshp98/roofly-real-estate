@@ -1,5 +1,6 @@
 import { client } from "../../utils/contentfulApi";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { _hideLoader, _showLoader } from "../../components/loaderfn";
 
 class PropertyView {
   #urlParams = new URLSearchParams(window.location.search);
@@ -21,15 +22,26 @@ class PropertyView {
   }
 
   async _fetchPropertyEntry() {
-    const entries = await client.getEntries();
+    _showLoader();
 
-    if (!entries) return;
+    try {
+      const entries = await client.getEntries();
 
-    const property = entries.items.find(
-      (entry) => entry.fields.slug === this.#slug
-    );
+      if (!entries) {
+        _hideLoader();
+        return;
+      }
 
-    this._renderPropertyDetails(property);
+      const property = entries.items.find(
+        (entry) => entry.fields.slug === this.#slug
+      );
+
+      this._renderPropertyDetails(property);
+    } catch (error) {
+      window.location = "../../../pages/page-not-found.html";
+    } finally {
+      _hideLoader();
+    }
   }
 
   _renderPropertyDetails(property) {
@@ -37,6 +49,8 @@ class PropertyView {
       window.location = "../../../pages/page-not-found.html";
       return;
     }
+
+    _hideLoader();
     this._generateMarkup(property);
   }
 
@@ -82,6 +96,7 @@ class PropertyView {
             <img
               src="${property.thumbnail?.fields.file.url}"
               alt="${property.thumbnail?.fields.description}"
+              loading="lazy"
               class="rounded-lg w-full object-cover h-full"
             />
           </div>
